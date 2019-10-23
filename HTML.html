@@ -3,15 +3,49 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="CSS.css">
+    <script type="text/javascript" src="labirinto.js"></script>
 
-    <title>tienda de drogas online</title>
+    <title></title>
   </head>
   <body>
-  	<div class="sidenav">
- 	<a href="#about">About</a>
-  	<a href="#services">Services</a>
-  	<a href="#clients">Clients</a>
-  	<a href="#contact">Contact</a>
-</div>
+    <!--BURGUER MENU-->
+    <nav role="navigation">
+      <div id="menuToggle" class="sidenav">
+        <!--
+        A fake / hidden checkbox is used as click reciever,
+        so you can use the :checked selector on it.
+        -->
+        <input type="checkbox" />
+        
+        <!--
+        Some spans to act as a hamburger.
+        
+        They are acting like a real hamburger,
+        not that McDonalds stuff.
+        -->
+        <span></span>
+        <span></span>
+        <span></span>
+    
+          <div id="menu">
+            
+            <a href="#">Inicio</a>
+            <a href="#">Mi cuenta</a>
+            <a href="#">Ayuda</a>
+            <a href="#">Salir</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--END BURGUER MENU-->
+    
+    <!--LABIRINTO second Try-->
+    <div class="canvasContainer">
+      <div id="canvasLayer"></div>
+      <script type="text/javascript">
+          startGame("canvasLayer");
+      </script>    
+      </div>
+    <!--END LABIRINTO-->
   </body>
 </html>
