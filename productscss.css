@@ -1,0 +1,53 @@
+#lista{
+	display:flex;
+	order:2;
+	padding:0px;
+	list-style-type:none;
+	flex-direction:row;
+  align-items:baseline;
+	}
+
+#primero{
+	background-color:#dbdbdb;
+	color:#c242f5;
+	border-style:inset;
+	border-width:4px;
+	border-color:#c242f5;
+	flex-grow:2;
+	padding:5%;
+	margin:10px;
+
+}
+
+#segundo{
+	background-color:#7a7a7a;
+	color:#e1a2f2;
+	border-style:outset;
+	border-width:4px;
+	border-color:#5e157a;
+	flex-grow:1;
+	padding:3%;
+	margin:10px;
+}
+
+#tercero{
+	background-color:#dbdbdb;
+	color: #5e157a;
+	border-style:outset;
+	border-width:4px;
+	border-color:#b800ff;
+	flex-grow:3;
+	padding:4%;
+	margin:10px;
+}
+
+#cuarto{
+	background-color:#7a7a7a;
+	color:#b800ff;
+	border-style:inset;
+	border-width:4px;
+	border-color:#e1a2f2;
+	flex-grow:1;
+	padding:2%;
+	margin:10px;
+}

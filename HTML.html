@@ -1,15 +1,103 @@
 <!DOCTYPE html>
+
 <html>
 	<head>
-		<link href="CSS.css"rel="stylesheet" type="text/css">
+		<link href="productscss.css"rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="slidercss.css" type="text/css">
+		<link rel="stylesheet" href="burger.css" type="text/css">
+			<link rel="stylesheet" href="menuSuperior.css" type="text/css">
+    <script type="text/javascript" src="slider.js"></script>
 		<title>TIENDA ONLINE</title>
 	</head>
-	<body>
-			<ul>
+
+	<body onload="createSlider();">
+		<!--BURGUER MENU-->
+		<div id="menu">
+
+
+			<nav role="navigation" id="burger">
+				<div id="menuToggle" class="sidenav">
+					<!--
+					A fake / hidden checkbox is used as click reciever,
+					so you can use the :checked selector on it.
+					-->
+					<input type="checkbox" />
+
+					<!--
+					Some spans to act as a hamburger.
+
+					They are acting like a real hamburger,
+					not that McDonalds stuff.
+					-->
+
+
+
+					<span></span>
+					<span></span>
+					<span></span>
+
+						<div id="menu">
+
+							<a href="#">Inicio</a>
+							<a href="#">Mi cuenta</a>
+							<a href="#">Ayuda</a>
+							<a href="#">Salir</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+		<nav class="Menu-Container">
+			<div>Portatiles</div>
+			<div>Sobremesa</div>
+			<div>Periféricos</div>
+			<div>Gaming</div>
+		</nav>
+
+</div>
+		<!--END BURGUER MENU-->
+<div id="slider">
+		<div id="slider_content">
+ 		 <button id="slide_back" onclick="incrementSliderImage(-1)">&#10094;</button>
+ 		 <button id="slide_next" onclick="incrementSliderImage(1)">&#10095;</button>
+
+ 		 <div id="slider_dots">
+ 		 </div>
+ 		 <div id="slider_pages">
+ 		 </div>
+ 	 	</div>
+</div>
+			<ul id="lista">
 				<div id="primero">PRODUCTO 1</div>
 				<div id="segundo">PRODUCTO 2</div>
 				<div id="tercero">PRODUCTO 3</div>
 				<div id="cuarto">PRODUCTO 4</div>
 			</ul>
-	</body>
+			<ul id="lista">
+				<div id="primero">PRODUCTO 1</div>
+				<div id="segundo">PRODUCTO 2</div>
+				<div id="tercero">PRODUCTO 3</div>
+				<div id="cuarto">PRODUCTO 4</div>
+			</ul>
+			<ul id="lista">
+				<div id="primero">PRODUCTO 1</div>
+				<div id="segundo">PRODUCTO 2</div>
+				<div id="tercero">PRODUCTO 3</div>
+				<div id="cuarto">PRODUCTO 4</div>
+			</ul>
+			<ul id="lista">
+				<div id="primero">PRODUCTO 1</div>
+				<div id="segundo">PRODUCTO 2</div>
+				<div id="tercero">PRODUCTO 3</div>
+				<div id="cuarto">PRODUCTO 4</div>
+			</ul>
+			<ul id="lista">
+				<div id="primero">PRODUCTO 1</div>
+				<div id="segundo">PRODUCTO 2</div>
+				<div id="tercero">PRODUCTO 3</div>
+				<div id="cuarto">PRODUCTO 4</div>
+			</ul>
+
+
+	    <!--END LABIRINTO-->
+</body>
 </html>
