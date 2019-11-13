@@ -2,9 +2,25 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="slidercss.css" type="text/css">
+    <script type="text/javascript" src="slider.js"></script>
+    <title>Tienda</title>
   </head>
-  <body>
+  <body onload="createSlider();">
+
+    <div id="slider_content">
+      <button id="slide_back" onclick="incrementSliderImage(-1)">&#10094;</button>
+      <button id="slide_next" onclick="incrementSliderImage(1)">&#10095;</button>
+
+      <div id="slider_dots">
+      </div>
+      <div id="slider_pages">
+
+      </div>
+
+
+    </div>
+
 
   </body>
 </html>
