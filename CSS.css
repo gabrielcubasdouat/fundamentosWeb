@@ -1,24 +1,27 @@
 
-
 .Menu-Container{
-  display: flex;
-  justify-content: center;
   background-color: #333;
-  flex-flow: row wrap;
   margin: -6pt;
 }
 
-.Menu-Container>div {
+.Menu-Container>div.Menu-Center{
+	display: flex;
+	justify-content: center;
+}
+
+.Menu-Container>div.Menu-Center>div {
   color: #f2f2f2;
   margin: 0%;
   font-size: 20pt;
   padding: 15pt;
 }
 
-.Menu-Container>div:hover{
-	background-color: #ddd;
-	color: black;
-	
+.Menu-Container>div.Menu-Right{
+	 display: flex;
+	justify-content: right;
 }
 
-
+.Menu-Container>div.Menu-Center>div:hover{
+	background-color: #ddd;
+	color: black;
+}
