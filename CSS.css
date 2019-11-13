@@ -3,24 +3,22 @@
 .Menu-Container{
   display: flex;
   justify-content: center;
-  background-color: #c242f5;
+  background-color: #333;
   flex-flow: row wrap;
-  border-radius: 21pt;
+  margin: -6pt;
 }
 
 .Menu-Container>div {
-  color: black;
-  margin: 2%;
-  font-size: 25pt;
+  color: #f2f2f2;
+  margin: 0%;
+  font-size: 20pt;
   padding: 15pt;
 }
 
 .Menu-Container>div:hover{
-	background-color:#e1a2f2;
-	text-decoration: underline;
-	border:1pt;	
-	border-style: solid;
-	border-color:#5e157a;
-	border-radius: 3pt;
-	padding: 14pt;		/*se pone el padding original-1 porque al añadir el hover el container se hace más grande y queda feo*/
+	background-color: #ddd;
+	color: black;
+	
 }
+
+
