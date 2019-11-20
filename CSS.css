@@ -7,7 +7,9 @@
 .Menu-Container>div.Menu-Center{
 	display: flex;
 	justify-content: center;
+	width: 100%;
 }
+
 
 .Menu-Container>div.Menu-Center>div {
   color: #f2f2f2;
@@ -16,12 +18,35 @@
   padding: 15pt;
 }
 
-.Menu-Container>div.Menu-Right{
-	 display: flex;
-	justify-content: right;
-}
-
 .Menu-Container>div.Menu-Center>div:hover{
 	background-color: #ddd;
 	color: black;
+}
+
+.Menu-Search{
+	position: absolute;
+	right: 40pt;
+	top: 16pt;
+}
+
+.Menu-Search>input{
+	padding: 5px;
+	font-size: 17px;
+	border: 1px solid #4E4351;
+	width: 80%;
+	background: #f1f1f1;
+}
+
+.Menu-Search>button{
+	position: absolute;
+	top: 0.1pt;
+	right: 5pt;
+	width: 15%;
+	padding: 3.5pt;
+	background: #c242f5;
+	color: white;
+	font-size: 17px;
+	border: 1px solid #4E4351;
+	border-left: none;
+	cursor: pointer;
 }
