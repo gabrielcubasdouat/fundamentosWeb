@@ -1,57 +1,4 @@
 
-<<<<<<< HEAD
-.Menu-Container{
-  background-color: #333;
-  margin: -6pt;
-}
-
-.Menu-Container>div.Menu-Center{
-	display: flex;
-	justify-content: center;
-	width: 100%;
-}
-
-
-.Menu-Container>div.Menu-Center>div {
-  color: #f2f2f2;
-  margin: 0%;
-  font-size: 20pt;
-  padding: 15pt;
-}
-
-.Menu-Container>div.Menu-Center>div:hover{
-	background-color: #ddd;
-	color: black;
-}
-
-.Menu-Search{
-	position: absolute;
-	right: 40pt;
-	top: 16pt;
-}
-
-.Menu-Search>input{
-	padding: 5px;
-	font-size: 17px;
-	border: 1px solid #4E4351;
-	width: 80%;
-	background: #f1f1f1;
-}
-
-.Menu-Search>button{
-	position: absolute;
-	top: 0.1pt;
-	right: 5pt;
-	width: 15%;
-	padding: 3.5pt;
-	background: #c242f5;
-	color: white;
-	font-size: 17px;
-	border: 1px solid #4E4351;
-	border-left: none;
-	cursor: pointer;
-}
-=======
 #lista{
 	display:flex;
 	order:2;
@@ -107,15 +54,6 @@
 }
 
 
-/*=========LABIRINTO=======*/
-.canvasContainer{
-  display: flex;
-  height: 500px;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid red;
-}
-
 /*=========BURGUER SIDE MENU=======*/
 .sidenav a {
   padding: 6px 8px 6px 16px;
@@ -151,14 +89,12 @@
 
   cursor: pointer;
 
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  opacity: 0;
+  z-index: 2;
 
 }
 
-/*
- * Just a quick hamburger
- */
+
 #menuToggle span
 {
   display: block;
@@ -189,10 +125,7 @@
   transform-origin: 0% 100%;
 }
 
-/*
- * Transform all the slices of hamburger
- * into a crossmark.
- */
+
 #menuToggle input:checked ~ span
 {
   opacity: 1;
@@ -200,18 +133,12 @@
   background: #232323;
 }
 
-/*
- * But let's hide the middle one.
- */
 #menuToggle input:checked ~ span:nth-last-child(3)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
 #menuToggle input:checked ~ span:nth-last-child(2)
 {
   transform: rotate(-45deg) translate(0, -1px);
@@ -228,7 +155,7 @@
   padding-top: 200px;
   background: black;
 
-  /* to stop flickering of text in safari */
+
 
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
@@ -237,11 +164,7 @@
 }
 
 
-/*
- * And let's slide it in from the left
- */
 #menuToggle input:checked ~ div
 {
   transform: none;
 }
->>>>>>> master

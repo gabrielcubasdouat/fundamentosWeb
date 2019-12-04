@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8">
+            <link href="menu_superior.css" rel="stylesheet" type="text/css">
+            <link rel="stylesheet" href="slider.css" type="text/css">
+            <link rel="stylesheet" href="burger.css" type="text/css">
+            <link rel="stylesheet" href="main.css" type="text/css">
+            <script type="text/javascript" src="slider.js"></script>
+            <script src="https://kit.fontawesome.com/7137cd7780.js" crossorigin="anonymous"></script>	<!-- Para los iconos --> 
+    </head>
+    <body onload="createSlider();">
+          
+
+
+             <nav class="Menu-Container">
+                    <div id="menuToggle" class="sidenav">
+                            <input type="checkbox" />
+                            <span></span>
+                            <span></span>
+                            <span></span>       
+                              <div id="menu">
+                                <a href="#">Inicio</a>
+                                <a href="#">Mi cuenta</a>
+                                <a href="#">Ayuda</a>
+                                <a href="#">Salir</a>
+                              </div>
+                            </div>
+                          </div>
+                    <div class="Menu-Center">
+                        <div>Portatiles</div>
+                        <div>Sobremesa</div>
+                        <div>Periféricos</div>
+                        <div>Gaming</div>
+                    </div>
+                    <form class="Menu-Search">
+                            <input type="text" placeholder="Search.." name="search">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                </nav>
+              
+        <main id="main_site">
+            
+    <div id="slider_content">
+            <button id="slide_back" onclick="incrementSliderImage(-1)">&#10094;</button>
+            <button id="slide_next" onclick="incrementSliderImage(1)">&#10095;</button>
+      
+            <div id="slider_dots">
+            </div>
+            <div id="slider_pages">
+      
+            </div>
+      
+      
+          </div>
+      
+        </main>
+    </body>
+</html>
