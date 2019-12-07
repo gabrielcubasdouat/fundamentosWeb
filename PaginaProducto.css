@@ -4,3 +4,41 @@ body{
   height:1000px;
   background-image: linear-gradient(to bottom right,black,purple);
 }
+
+#nombre{
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 40px;
+  color:white;
+
+}
+
+#imagen{
+  margin-top: 0px;
+  margin-right: 40px;
+  margin-left: 0px;
+ 
+}
+img{
+  border-radius:2%;
+}
+
+#main_site{
+  display:flex;
+  justify-content: flex-start;
+}
+
+
+#descripcion{
+  border-color: #e1a2f2;
+  border-radius:20px;
+}
+#comprar{
+  background-color:white;
+  border-radius:8%;
+  border:0%;
+  position: absolute;
+  top:850px;
+  left:50%;
+  padding: 20px;
+}
