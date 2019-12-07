@@ -1,0 +1,65 @@
+
+/*=========USER SECTION=======*/
+.user-section {
+  display: flex;
+  flex-direction: column;
+  margin: 100px 300px 300px 300px;
+  align-items: center;
+  background-color: lightgrey;
+  flex-wrap: wrap;
+}
+
+.user-input {
+  padding: 25px;
+  margin: 10px 0px 0px 0px;
+  text-decoration: none;
+  font-size: 25px;
+  color: grey;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+  text-align: center;
+  width: 445px;
+}
+
+/*buttons*/
+.action-button {
+  width: 500px;
+  background: purple;
+  font-size: 25px;
+  color: grey;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+  text-align: center;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+
+}
+.action-button:hover, .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+#details {
+  display: none;
+  flex-direction: column
+}
+
+/*properties for button animation*/
+#payment{
+  display: none;
+  flex-direction: column;
+}
+#register{
+  display: none;
+}
+#btnNext{
+  display: block;
+}
+#btnRegister{
+  display: block;
+}
+#btnSignin{
+  display: block;
+
+}

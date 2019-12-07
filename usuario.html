@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+	<meta charset="utf-8">
+    <link href="usuario.css" rel="stylesheet" type="text/css">
+    <link href="menu_superior.css" rel="stylesheet" type="text/css">
+    <link href="burger.css"  rel="stylesheet" type="text/css">
+    <link rel="icon" href="icon.png">
+    <script src="https://kit.fontawesome.com/7137cd7780.js" crossorigin="anonymous"></script>	<!-- Para los iconos -->
+
+	<title>Página usuario</title>
+</head>
+<body>
+    <nav class="Menu-Container">
+            <div id="menuToggle" class="sidenav">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>       
+                      <div id="menu">
+                        <a href="index.html">Inicio</a>
+                        <a href="usuario.html">Mi cuenta</a>
+                        <a href="ayuda.html">Ayuda</a>
+                        <a href="http://www.rubenbupe.es">Salir</a>
+                      </div>
+                    </div>
+                  </div>
+            <div class="Menu-Center">
+                <div>Portatiles</div>
+                <div>Sobremesa</div>
+                <div>Periféricos</div>
+                <div>Gaming</div>
+            </div>
+            <form class="Menu-Search">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </nav>
+    <!--MAIN USER SECTION-->
+    <div class="user-section">
+        <h1 class="user-input">Introduzca tus credenciales o regístrate:</h1>
+        <input class="user-input" placeholder="Login"/>
+        <input class="user-input" type="Password" placeholder="Password"/>
+        <script type="text/javascript">
+            function detailsSection() {
+                var x = document.getElementById("details");
+                if (x.style.display === "none") {
+                  x.style.display = "flex";
+                  document.getElementById("btnSignin").style.display = "none";
+                  document.getElementById("btnRegister").style.display = "none";
+
+                } else {
+                  x.style.display = "none";
+                }
+            }
+            function registerSection() {
+                var x = document.getElementById("register");
+                if (x.style.display === "none") {
+                  x.style.display = "block";
+                  document.getElementById("btnRegister").style.display = "none";
+                } else {
+                  x.style.display = "none";
+                }  
+            }
+        </script>
+        <div id="register">
+            <input class="user-input" type="Password" placeholder="Confirm Password"/>
+        </div>
+        <button id="btnRegister" class="action-button" onclick="registerSection()">Register</button>
+        <button id="btnSignin" class="action-button" onclick="detailsSection()">Sign in</button>
+        <div id="details">
+            <h1 class="user-input">Introduzca tu dirección:</h1>
+            <input class="user-input" placeholder="Nombre"/>
+            <input class="user-input" placeholder="Apellido"/>
+            <input id="address" class="user-input" placeholder="Dirección de entrega" />
+            <div id="googleMap" style="width:500px;height:400px; margin-top: 10px; position: fixed"></div>
+            <button id="btnNext" class="action-button" onclick="paymentSection()">next</button>
+            <script type="text/javascript">
+                function paymentSection() {
+                var x = document.getElementById("payment");
+                if (x.style.display === "none") {
+                  x.style.display = "flex";
+                  document.getElementById("btnSignin").style.display = "none";
+                  document.getElementById("btnNext").style.display = "none";
+                } else {
+                  x.style.display = "none";
+                }
+            }
+            </script>
+            <div id="payment">
+                <h1 class="user-input">Datos de pago</h1>
+                <input class="user-input" placeholder="Dirección de facturación"/>
+                <input class="user-input" type="numeric" style="display:inline-flex;width: 280px" placeholder="Número de tarjeta"/>
+                <input id="small-input" style="width:50px; display:inline-flex;" class="user-input" type="numeric" placeholder="CVV"/>
+                <h2 class="user-input" style="display:inline-flex;margin: 0px -9px -30px -27px">Fecha de expiración:</h2>
+                <input style="font-size: 15px;width:30px; display:inline-flex;" class="user-input" type="numeric" placeholder="Mes"/>
+                <input style="font-size: 15px;width:30px; display:inline-flex;" class="user-input" type="numeric" placeholder="Año"/>
+                <input class="user-input" placeholder="Nombre del titular"/>
+                <button class="action-button" onclick="thanks()"  style="margin-bottom: 50px; background-color: lightgreen">Confirmar pedido</button>
+                <script type="text/javascript">
+                    function thanks(){
+                        alert("Gracias!");
+                        return location.href ="index.html";
+                    }
+                </script>
+            </div>
+            
+        </div>
+            
+    </div>
+    <script>
+        function myMap() {
+            var mapProp= {
+              center:new google.maps.LatLng(51.508742,-0.120850),
+              zoom:5,
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2-hG6pnQuvEpqJ6OmsLxmM_Vq9aPo0iE&callback=myMap"></script>
+    <!--END MAIN USER SECTION-->
+
+    
+
+</body>
+</html>
