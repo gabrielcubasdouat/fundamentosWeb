@@ -5,3 +5,25 @@ main{
   text-align: center;
   color:white;
 }
+
+
+.main_product{
+	height: 550px;
+	width: 400px;
+}
+
+.main_product>img{
+	 border-radius: 4%;
+	 width: 400px;
+    height: auto;
+}
+.main_product>h3{
+	 color: black
+}
+
+#products_container{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
