@@ -29,15 +29,15 @@
                               </div>
                             </div>
                           </div>
-                    <div class="Menu-Center">
-                        <div>Portatiles</div>
-                        <div>Sobremesa</div>
-                        <div>Periféricos</div>
-                        <div>Gaming</div>
-                    </div>
+                          <div class="Menu-Center">
+                              <div onclick="irCategoria(LAPTOP)">Portatiles</div>
+                              <div onclick="irCategoria(DESKTOP)">Sobremesa</div>
+                              <div onclick="irCategoria(ACCESORIES)">Periféricos</div>
+                              <div onclick="irCategoria(MOBILE)">Móviles</div>
+                          </div>
                     <form class="Menu-Search">
-                            <input type="text" placeholder="Search.." name="search">
-                            <button type="submit"><i class="fa fa-search"></i></button>
+                      <input type="text" placeholder="Search.." name="search" id="searchbar">
+                            <button onclick="buscar()" id="lupa"><i class="fa fa-search"></i></button>
                     </form>
                 </nav>
 

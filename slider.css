@@ -30,7 +30,8 @@
 
 .slider_element{
   position: absolute;
-  z-index: -1;
+  cursor: pointer;
+  z-index: 0;
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
@@ -77,8 +78,6 @@
 #slider_dots{
   width: 100%;
   max-width: 100%;
-  float: left;
-  margin-top: 270px;
   text-align: center;
 }
 

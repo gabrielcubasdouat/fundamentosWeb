@@ -18,6 +18,7 @@ function setProducto(response){
   precio.innerHTML = item.getElementsByTagName("ConvertedCurrentPrice")[0].childNodes[0].nodeValue + " $";
 }
 
+
 function setIndexItems(response){
   var parser = new DOMParser();
   var xmlDoc = parser.parseFromString(response,"text/xml");
@@ -69,14 +70,15 @@ function loadProductsIndex(){
   xhr.send(data);
 }
 
-function searchPruductKeywords(){
-  var keywords = "iphone 8 plus"
-  var data = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<findItemsByKeywordsRequest xmlns=\"http://www.ebay.com/marketplace/search/v1/services\">\r\n  <keywords>"+ keywords +"</keywords>\r\n  <paginationInput>\r\n    <entriesPerPage>2</entriesPerPage>\r\n  </paginationInput>\r\n</findItemsByKeywordsRequest>";
+function searchPruductKeywords(keywords){
+  var numResults=52;
+  var data = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<findItemsByKeywordsRequest xmlns=\"http://www.ebay.com/marketplace/search/v1/services\">\r\n  <keywords>"+ keywords +"</keywords>\r\n  <paginationInput>\r\n    <entriesPerPage>"+numResults+"</entriesPerPage>\r\n  </paginationInput>\r\n</findItemsByKeywordsRequest>";
   var xhr = new XMLHttpRequest();
   xhr.withCredentials = true;
 
   xhr.addEventListener("readystatechange", function () {
     if (this.readyState === 4) {
+      setIndexItems(this.responseText);
       console.log(this.responseText);
     }
   });
@@ -164,5 +166,19 @@ function loadProduct(){
   xhr.setRequestHeader("cache-control", "no-cache");
 
   xhr.send(data);
+
+}
+
+function buscar(){
+  document.location.href = encodeURI("search.html?type=search&keywords="+document.getElementById("searchbar").value);
+}
+
+function irCategoria(){
+  
+}
+
+function realizarBusqueda(){
+  var keywords = decodeURI(window.location.search.substr(1));
+  searchPruductKeywords(keywords);
 
 }

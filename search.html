@@ -13,22 +13,22 @@
             <script src="https://kit.fontawesome.com/7137cd7780.js" crossorigin="anonymous"></script>	<!-- Para los iconos -->
 
     </head>
-    <body onload="createSlider();loadProductsIndex();">
+    <body onload="realizarBusqueda();">
 
 
 
              <nav class="Menu-Container">
 
-                    <div class="Menu-Center">
-                        <div onclick="irCategoria(LAPTOP)">Portatiles</div>
-                        <div onclick="irCategoria(DESKTOP)">Sobremesa</div>
-                        <div onclick="irCategoria(ACCESORIES)">Periféricos</div>
-                        <div onclick="irCategoria(MOBILE)">Móviles</div>
-                    </div>
-                    <div class="Menu-Search">
-                            <input type="text" placeholder="Search.." name="search" id="searchbar">
+               <div class="Menu-Center">
+                   <div onclick="irCategoria(LAPTOP)">Portatiles</div>
+                   <div onclick="irCategoria(DESKTOP)">Sobremesa</div>
+                   <div onclick="irCategoria(ACCESORIES)">Periféricos</div>
+                   <div onclick="irCategoria(MOBILE)">Móviles</div>
+               </div>
+                    <form class="Menu-Search">
+                      <input type="text" placeholder="Search.." name="search" id="searchbar">
                             <button onclick="buscar()" id="lupa"><i class="fa fa-search"></i></button>
-                        </div>
+                        </form>
                 </nav>
                 <div id="menuToggle" class="sidenav">
                         <input type="checkbox" />
@@ -46,26 +46,10 @@
 
         <main id="main_site">
 
-          <div id="slider_container">
-          <div id="slider_content">
-            <button id="slide_back" onclick="incrementSliderImage(-1)">&#10094;</button>
 
-            <div id="slider_visual">
-              <div id="slider_pages"></div>
-            </div>
-            <button id="slide_next" onclick="incrementSliderImage(1)">&#10095;</button>
-
-          </div>
-          <div id="slider_dots"></div>
-
-        </div>
 
       <div id="products_container">
-            <!--<a class="main_product" href="PaginaProducto.html" style=" text-decoration: none;">
-              <img src="Prueba.jpg">
-              <h3>Nombre Producto</h3>
-              <h4>Precio: 1500$</h2>
-              </a>-->
+
       </div>
 
 
