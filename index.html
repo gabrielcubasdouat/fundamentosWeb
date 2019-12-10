@@ -3,37 +3,22 @@
     <head>
             <title>Ramona's Shop</title>
             <meta charset="utf-8">
-            <link href="menu_superior.css" rel="stylesheet" type="text/css">
+            <link rel="stylesheet" href="main.css" type="text/css">
             <link rel="stylesheet" href="slider.css" type="text/css">
             <link rel="stylesheet" href="burger.css" type="text/css">
-            <link rel="stylesheet" href="main.css" type="text/css">
+            <link rel="stylesheet" href="menu_superior.css">
             <link rel="icon" href="icon.png">
             <script type="text/javascript" src="slider.js"></script>
-            <script src="https://kit.fontawesome.com/7137cd7780.js" crossorigin="anonymous"></script>	<!-- Para los iconos --> 
-            <style>
-                body{
-                 background-image:linear-gradient(to bottom right,white,purple);
-                }
-              </style>
+            <script type="text/javascript" src="producto.js"></script>
+            <script src="https://kit.fontawesome.com/7137cd7780.js" crossorigin="anonymous"></script>	<!-- Para los iconos -->
+
     </head>
-    <body onload="createSlider();">
-          
+    <body onload="createSlider();loadProductsIndex();">
+
 
 
              <nav class="Menu-Container">
-                    <div id="menuToggle" class="sidenav">
-                            <input type="checkbox" />
-                            <span></span>
-                            <span></span>
-                            <span></span>       
-                              <div id="menu">
-                                <a href="index.html">Inicio</a>
-                                <a href="usuario.html">Mi cuenta</a>
-                                <a href="ayuda.html">Ayuda</a>
-                                <a href="http://www.rubenbupe.es">Salir</a>
-                              </div>
-                            </div>
-                          </div>
+
                     <div class="Menu-Center">
                         <div>Portatiles</div>
                         <div>Sobremesa</div>
@@ -45,72 +30,45 @@
                             <button type="submit"><i class="fa fa-search"></i></button>
                         </form>
                 </nav>
-              
+                <div id="menuToggle" class="sidenav">
+                        <input type="checkbox" />
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                          <div id="menu">
+                            <a href="index.html">Inicio</a>
+                            <a href="usuario.html">Mi cuenta</a>
+                            <a href="ayuda.html">Ayuda</a>
+                            <a href="http://www.rubenbupe.es">Salir</a>
+                          </div>
+                        </div>
+                      </div>
+
         <main id="main_site">
-            
-    <div id="slider_content">
+
+          <div id="slider_container">
+          <div id="slider_content">
             <button id="slide_back" onclick="incrementSliderImage(-1)">&#10094;</button>
+
+            <div id="slider_visual">
+              <div id="slider_dots"></div>
+              <div id="slider_pages"></div>
+            </div>
             <button id="slide_next" onclick="incrementSliderImage(1)">&#10095;</button>
-      
-            <div id="slider_dots">
-            </div>
-            <div id="slider_pages">
-      
-            </div>
-      
-      
+
           </div>
-      
-          <div id="products_container">
-            <a class="main_product" href="PaginaProducto.html" style=" text-decoration: none;">   
+        </div>
+
+      <div id="products_container">
+            <!--<a class="main_product" href="PaginaProducto.html" style=" text-decoration: none;">
               <img src="Prueba.jpg">
               <h3>Nombre Producto</h3>
               <h4>Precio: 1500$</h2>
-              </a>
-            <a class="main_product" href="PaginaProducto.html" style=" text-decoration: none;">   
-              <img src="Prueba.jpg">
-              <h3>Nombre Producto</h3>
-              <h4>Precio: 1500$</h2>
-              </a>
-            <a class="main_product" href="PaginaProducto.html" style=" text-decoration: none;">   
-              <img src="Prueba.jpg">
-              <h3>Nombre Producto</h3>
-              <h4>Precio: 1500$</h2>
-              </a>
-            <a class="main_product"  href="PaginaProducto.html" style=" text-decoration: none;">   
-              <img src="Prueba.jpg">
-              <h3>Nombre Producto</h3>
-              <h4>Precio: 1500$</h2>
-              </a>
-            <a class="main_product"  href="PaginaProducto.html" style=" text-decoration: none;">   
-              <img src="Prueba.jpg">
-              <h3>Nombre Producto</h3>
-              <h4>Precio: 1500$</h2>
-              </a>
-            <a class="main_product"  href="PaginaProducto.html" style=" text-decoration: none;">   
-              <img src="Prueba.jpg">
-              <h3>Nombre Producto</h3>
-              <h4>Precio: 1500$</h2>
-              </a>
-            <a class="main_product"  href="PaginaProducto.html" style=" text-decoration: none;">   
-              <img src="Prueba.jpg">
-              <h3>Nombre Producto</h3>
-              <h4>Precio: 1500$</h2>
-              </a>
-            <a class="main_product"  href="PaginaProducto.html" style=" text-decoration: none;">   
-              <img src="Prueba.jpg">
-              <h3>Nombre Producto</h3>
-              <h4>Precio: 1500$</h2>
-              </a>
-            <a class="main_product" href="PaginaProducto.html" style=" text-decoration: none;">   
-              <img src="Prueba.jpg">
-              <h3>Nombre Producto</h3>
-              <h4>Precio: 1500$</h2>
-              </a>
-          </div>
-              
-              
-      
-        </main>
+              </a>-->
+      </div>
+
+
+
+      </main>
     </body>
 </html>

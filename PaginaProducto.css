@@ -10,20 +10,21 @@ body{
   margin-top: 80px;
   margin-bottom: 40px;
   color:white;
+  width: 100%;
 
 }
 
 #imagen{
-  margin-top: 0px;
   margin-right: 40px;
-  margin-left: 0px;
- 
+  margin-left: px;
+
 }
 img{
   border-radius:2%;
+  width: 50%;
 }
 
-#main_site{
+#details{
   display:flex;
   justify-content: flex-start;
 }

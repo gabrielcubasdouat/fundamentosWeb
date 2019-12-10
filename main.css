@@ -1,22 +1,22 @@
 
 
-main{
-  margin:100px;
-  text-align: center;
-  color:white;
+
+body{
+ background-image:linear-gradient(to bottom right,white,purple);
 }
 
 
+
 .main_product{
-	height: 550px;
-	width: 400px;
+	height: 400px;
+	width: 250px;
 }
 
 .main_product>img{
 	 border-radius: 4%;
-	 width: 400px;
+	 width: 250px;
     height: auto;
-   
+
 }
 .main_product>h3{
 	 color: black
@@ -28,5 +28,9 @@ main{
 	flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 100px;
-  
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 30px;
+  border: 2px solid black;
+  border-radius: 10px;;
 }

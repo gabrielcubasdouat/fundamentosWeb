@@ -8,12 +8,13 @@
             <link rel="stylesheet" href="main.css" type="text/css">
             <link rel="stylesheet" href="PaginaProducto.css">
             <link rel="icon" href="icon.png">
+            <script type="text/javascript" src="producto.js"></script>
             <script src="https://kit.fontawesome.com/7137cd7780.js" crossorigin="anonymous"></script>	<!-- Para los iconos -->
-           
+
     </head>
-    
-  
-    <body>
+
+
+    <body onload="loadProduct();">
              <nav class="Menu-Container">
                     <div id="menuToggle" class="sidenav">
                             <input type="checkbox" />
@@ -40,25 +41,24 @@
                     </form>
                 </nav>
 
-            <div id="nombre">
-                  <h1>Nombre del producto</h1>
-              </div>
-        <main id="main_site">
-            
+        <div id="nombre">
+          <h1 id="name_content">Nombre del producto</h1>
+        </div>
+        <div id="details">
             <div id="imagen">
-              <img src="Prueba.jpg">
+              <img id="img_content">
             </div>
 
-            <div id="descripcion">
-              <h3>Descripcion del Producto</h3>
-              <p>Pos mira este producto es un aifon es mu weno mu bonito y no tan barato compratelo</p>
-            </div>
             <div id="precio">
-                <h2>1500$</h2>
+                <h2 id="price_content">1500$</h2>
             </div>
-        </main>
-      
+        </div>
+
+        <div id="descripcion">
+
+        </div>
+
         <a type="button" role="link" id="comprar" href="usuario.html" ><i class="fas fa-shopping-cart"></i>COMPRAR</a>
-  
+
     </body>
 </html>
