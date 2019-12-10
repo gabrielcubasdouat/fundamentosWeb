@@ -43,6 +43,7 @@ function setSliderImage(image){
   sliderElements[imgIndex].style.opacity = "1";
   sliderDots[imgIndex].style.backgroundColor = "purple";
 
+
   restartSliderTimer();
 
   return;
