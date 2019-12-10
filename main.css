@@ -5,6 +5,11 @@ body{
  background-image:linear-gradient(to bottom right,white,purple);
 }
 
+#category_name{
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
+}
 
 
 .main_product{

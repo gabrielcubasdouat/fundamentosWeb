@@ -20,15 +20,15 @@
              <nav class="Menu-Container">
 
                <div class="Menu-Center">
-                   <div onclick="irCategoria(LAPTOP)">Portatiles</div>
-                   <div onclick="irCategoria(DESKTOP)">Sobremesa</div>
-                   <div onclick="irCategoria(ACCESORIES)">Periféricos</div>
-                   <div onclick="irCategoria(MOBILE)">Móviles</div>
+                   <div onclick="irCategoria('LAPTOP')">Portatiles</div>
+                   <div onclick="irCategoria('DESKTOP')">Sobremesa</div>
+                   <div onclick="irCategoria('ACCESORIES')">Periféricos</div>
+                   <div onclick="irCategoria('MOBILE')">Móviles</div>
                </div>
-                    <form class="Menu-Search">
+                    <div class="Menu-Search">
                       <input type="text" placeholder="Search.." name="search" id="searchbar">
                             <button onclick="buscar()" id="lupa"><i class="fa fa-search"></i></button>
-                        </form>
+                        </div>
                 </nav>
                 <div id="menuToggle" class="sidenav">
                         <input type="checkbox" />
@@ -47,7 +47,7 @@
         <main id="main_site">
 
 
-
+      <h1 id="category_name"></h2>
       <div id="products_container">
 
       </div>

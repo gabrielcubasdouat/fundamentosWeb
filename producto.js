@@ -1,6 +1,7 @@
 const CATEGORY_LAPTOP = 175672;
 const CATEGORY_DESKTOP = 171957;
 const CATEGORY_ACCESORIES = 31530;
+const CATEGORY_MOBILE = 15032;
 
 // TODO: Temporizador para las respuestas.
 function setProducto(response){
@@ -101,8 +102,7 @@ function searchPruductKeywords(keywords){
   xhr.send(data);
 }
 
-function searchPruductCategory(){
-  var categoryId = CATEGORY_LAPTOP;
+function searchPruductCategory(categoryId){
   var numResults = 10;
   var data = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<findItemsByCategoryRequest xmlns=\"http://www.ebay.com/marketplace/search/v1/services\">\r\n  <categoryId>"+ categoryId +"</categoryId>\r\n  <outputSelector>AspectHistogram</outputSelector>\r\n  <paginationInput>\r\n    <entriesPerPage>"+numResults+"</entriesPerPage>\r\n  </paginationInput>\r\n  <itemFilter>\r\n    <name>ListingType</name>\r\n    <value>FixedPrice</value>\r\n  </itemFilter>\r\n</findItemsByCategoryRequest>\r\n";
 
@@ -111,7 +111,7 @@ function searchPruductCategory(){
 
   xhr.addEventListener("readystatechange", function () {
     if (this.readyState === 4) {
-      console.log(this.responseText);
+      setIndexItems(this.responseText);
     }
   });
 
@@ -173,12 +173,42 @@ function buscar(){
   document.location.href = encodeURI("search.html?type=search&keywords="+document.getElementById("searchbar").value);
 }
 
-function irCategoria(){
-  
+function irCategoria(category){
+  document.location.href = encodeURI("search.html?type=category&category="+category);
 }
 
 function realizarBusqueda(){
-  var keywords = decodeURI(window.location.search.substr(1));
-  searchPruductKeywords(keywords);
+  var uri = decodeURI(window.location.search.substr(1)).split("&");
+  var title = document.getElementById("category_name");
+  if(uri[0] == "type=search"){
+    var keywords = uri[1].split("=")[1];
+    title.innerHTML = "Resultado de la búsqueda";
+    searchPruductKeywords(keywords);
+  }else{
+    console.log(uri[1].split("=")[1]);
+    switch (uri[1].split("=")[1]) {
+      case "MOBILE":
+          searchPruductCategory(CATEGORY_MOBILE);
+          title.innerHTML = "Teléfonos móviles";
+          break;
+      case "LAPTOP":
+          searchPruductCategory(CATEGORY_LAPTOP);
+          title.innerHTML = "Ordenadores Portátiles";
+          break;
+      case "DESKTOP":
+          title.innerHTML = "Ordenadores de Sobremesa";
+          searchPruductCategory(CATEGORY_DESKTOP);
+          break;
+      case "ACCESORIES":
+          title.innerHTML = "Periféricos";
+          searchPruductCategory(CATEGORY_ACCESORIES);
+          break;
+      default:
+        alert("Error: la categoría no existe");
+
+    }
+  }
+
+
 
 }
